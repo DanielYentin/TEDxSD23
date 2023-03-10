@@ -8,10 +8,10 @@ public class java {
             long start = System.nanoTime();
             Person[] array = fill_mem(tests);
             long end = System.nanoTime();
-            
+
             // convert nano to sec
             double duration = (end - start)/(1_000_000_000.0);
-            System.out.println(String.format("%.3f", duration));
+            System.out.println(String.format("%.5f", duration));
         }
     }
 
@@ -19,7 +19,7 @@ public class java {
         Person[] list = new Person[n];
         for (int i = 0; i < list.length; i++) {
             list[i] = new Person(i);
-        } 
+        }
         return list;
     }
 }

@@ -36,6 +36,7 @@ compile_rust:
 	@rustc rust.rs -o rust.out
 
 clean:
-	@rm c.out
-	@rm java.class
-	@rm rust.out
+	@rm c.out;
+	@rm java.class;
+	@rm Person.class;
+	@rm rust.out;

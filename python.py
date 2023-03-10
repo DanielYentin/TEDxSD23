@@ -1,16 +1,16 @@
 import time, os
-tests = 1_000_000
+tests = 1_000_00
 
 def main():
     pid = os.getpid()
     print(f"Python pid: {pid}")
 
     while True:
-        start = time.time() 
+        start = time.time()
         array = fill_mem(tests)
         end = time.time()
         duration = (end - start)
-        print(f"{duration:.3f}")
+        print(f"{duration:.5f}")
 
 def fill_mem(n):
     array = [None] * n
