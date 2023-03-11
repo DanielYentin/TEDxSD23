@@ -1,5 +1,5 @@
 import time, os
-tests = 1_000_000
+TESTS = 1_000_000
 
 def main():
     pid = os.getpid()
@@ -7,16 +7,17 @@ def main():
 
     while True:
         start = time.time() 
-        array = fill_mem(tests)
+
+        array = [None] * TESTS
+        fill_mem(array)
+        
         end = time.time()
         duration = (end - start)
-        print(f"{duration:.3f}")
+        print(f"{duration:.5f}")
 
-def fill_mem(n):
-    array = [None] * n
+def fill_mem(array):
     for i in range(len(array)):
         array[i] = Person(i)
-    return array
 
 class Person:
     def __init__(self, age) -> None:

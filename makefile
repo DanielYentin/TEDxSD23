@@ -17,7 +17,7 @@ run_c:
 	@./c.out
 run_java:
 	# limit memory of program to 256mb to force GC to run more frequently
-	@java -Xmx256M -Xms256M java 
+	@java -Xmx1024M -Xms1024M java 
 run_python:
 	@python3 python.py
 run_rust:
@@ -36,6 +36,5 @@ compile_rust:
 	@rustc rust.rs -o rust.out
 
 clean:
-	@rm c.out
-	@rm java.class
-	@rm rust.out
+	@rm java.class; @rm Person.class; @rm c.out; @rm rust.out
+	
