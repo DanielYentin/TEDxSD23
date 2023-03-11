@@ -13,15 +13,20 @@ typedef struct Person {
 void fill_mem(Person* array) {
     for (int i = 0; i < TESTS; i++) {
         Person person;
-        person.age = i; 
+        person.age = i;
         array[i] = person;
     }
 }
 
-int main() {
+int main(int argc, char *argv[]) {
     int pid = getpid();
     printf("C pid: %d\n", pid);
-    
+
+	bool FREE = false;
+	if (argc > 1) {
+		FREE = true;
+	}
+
     struct timespec start, end;
     while (true) {
         clock_gettime(CLOCK_MONOTONIC_RAW, &start);
@@ -35,4 +40,4 @@ int main() {
         long double duration = ((end.tv_sec - start.tv_sec) * 1000000 + (end.tv_nsec - start.tv_nsec) / 1000)/1000000.0;
         printf("%.5Lf\n", duration);
     }
-} 
+}

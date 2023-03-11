@@ -12,9 +12,10 @@ public class java {
             fill_mem(array);
             
             long end = System.nanoTime();
-            
+
             // convert nano to sec
             double duration = (end - start)/(1_000_000_000.0);
+            System.out.println(String.format("%.5f", duration));
             System.out.println(String.format("%.5f", duration));
         }
     }
