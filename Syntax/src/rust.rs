@@ -1,7 +1,7 @@
 fn main() {
     let a: i32 = 0;
     let b: i32 = 10;
-    let sum: i32 = sum_evens1(a, b);
+    let sum: i32 = sum_evens6(a, b);
     println!("Rust: sum of evens from {a} to {b} is {sum}");
 }
 

@@ -23,4 +23,4 @@ compile_rust:
 
 clean:
 	@rm java.class; rm c.out; rm rust.out
-	
+
