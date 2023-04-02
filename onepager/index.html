@@ -9,13 +9,22 @@
 </head>
     <body>
         <div>
-            <h3>What is rust?</h3>
+            <h3>🦀 What is rust? 🦀</h3>
             <p>
-                Rust is commonly described as a "memory safe, compiled languages with high level simplicity, and low level performance."
-                Lets go through each of these one by one, and discuss what it means.
+                Rust is commonly described as a "memory safe, compiled languages with high level simplicity and low level performance."<br>
+                Lets go through each of these one by one, and discuss what it means. I will be using a total of 3 other  languages: Python, Java, and C, to try and showcase the features in rust. This is done in a hope that you are at least familiar with at least one of them and that will help you draw connections to what I am describing. 
             </p>
             <p>
-                1. "compiled": this one is very simple, and it just means that before you can execute you code, you need to first compile it into an intermediate file. This is in contrast to JIT (just in time) languages like python, which execute the file directly.
+                <b>compiled</b>: this one is very simple, and it just means that before you can execute you code, you need to first compile it into an intermediate file. This is in contrast to JIT (just in time) languages like python, which execute the file directly. This is a great thing for performance because the file can be extensively optimized by the compiler, improving runtime speed by several magnitudes. 
+            </p>
+
+            
+            <p>
+                <b>memory safe</b>: memory safety might not be a term you are familiar with if you have not used a low level language like 'C' before. Most higher level languages out there (Python, Java, etc.), implement a a garbage collector (GC), which does memory management for you. Whenever you create a variable in any language, and a assign it a value, that variable needs to be stored in memory. When that variable goes out of scope, aka it is not used anymore, then that memory needs to be freed at some point. If this does not happen, your entire computer can eventually freeze because there is no more memory for it to use. Memory is freed in three ways: through a GC, manually, or an ownership-borrow system. 
+
+                GC: a garbage collector is a periodic process that your program executes in order to free up memory. It works by looping over all the memory in the current scope and checking if there are any references left to that memory in your program. If there aren't any, then that memory can be freed, which just means it is marked as no longer used, and returned to the Operating System to manage. Unfortunately this can create big lag spikes in your program whenever the GC executes, since checking all the memory in your program can take quite a bit of time depending on how large your program gets. 
+
+                Manual: manual memory management is where you explicitly request memory, most commonly through malloc(), and free memory, most commonly through free().
             </p>
 
         </div>
