@@ -25,7 +25,7 @@ fn sum_evens2(a: i32, b: i32) -> i32 {
     // a..=b is a range, from a to b inclusive.
     // if a > b, the range is empty, therefore sum is 0.
     let mut sum = 0;
-    for i in a..b+1 { 
+    for i in a..=b { 
         if i % 2 == 0 {
             sum += i;
         }
@@ -56,7 +56,7 @@ fn sum_evens5(a: i32, b: i32) -> i32 {
 
 fn sum_evens6(a: i32, b: i32) -> i32 {
     // using "correct" rust syntax:
-    // 1. no need for return (must omit semicolon at end of line)
+    // 1. no need for return, rust returns last line of function by default (must omit semicolon at end of line)
     // 2. chain methods on new lines 
     (a..b+1)
         .filter(|e| e % 2 == 0)
